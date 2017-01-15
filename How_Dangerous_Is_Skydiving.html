@@ -2,9 +2,8 @@
 <html>
 <style>
     .button {
-        float:right;
         width: 100px;
-        height: 50px;
+        height: 100px;
     }
     
     .buttonText {
@@ -15,18 +14,44 @@
 <body>
 
 <canvas id='myCanvas' 
-width='100' height='100'
+width='400' height='150'
 style='border:1px solid #d3d3d3;'>
 Your browser does not support the HTML5 canvas tag.    
 </canvas>
 
-<button type="button" class = "button" onclick=skydiving()> <div class='buttonText'>Die Skydiving</div></button>   
-
-<button type="button" class = "button" onclick=lottery()> <div class='buttonText'>Win the Lottery</div></button> 
+<table style='float:right'>
+    <tr>
+        <td>
+            <button type="button" class = "button" onclick=skydiving()> <div class='buttonText'>Die Skydiving</div></button> 
+        </td>
+        <td>
+            <button type="button" class = "button" onclick=lottery()> <div class='buttonText'>Win the Lottery</div></button> 
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" class = "button" onclick=lightning()> <div class='buttonText'>Killed By Lightning</div></button>
+        </td>
+        <td>
+            <button type="button" class = "button" onclick=heartDisease()> <div class='buttonText'>Killed By Heart Disease</div></button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button type="button" class = "button" onclick=flu()> <div class='buttonText'>Killed By Flu or Pneumonia</div></button>
+        </td>
+        <td>
+            <button type="button" class = "button" onclick=flu()> <div class='buttonText'>Killed By A Shark</div></button>
+        </td>
+    </tr>
+</table>
     
 <script>
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
+    ctx.font = "40px Verdana";
+    ctx.fillText("Pick a probability",20,50);
+    ctx.fillText("to visualize!",70,100);
     
     //var imgData = ctx.getImageData(0,0,c.width,c.height);
     
@@ -54,6 +79,37 @@ Your browser does not support the HTML5 canvas tag.
         
         ctx.fillStyle = "red";
         ctx.fillRect(c.width-1, c.height-1, 1, 1);
+    }
+    
+    function lightning() {
+        c.width = 1000;
+        c.height = 700;
+        
+        ctx.fillStyle = "green";
+        ctx.fillRect(0, 0, c.width, c.height);
+        
+        ctx.fillStyle = "red";
+        ctx.fillRect(c.width-2, c.height-2, 2, 2);
+    }
+    
+    function heartDisease() {
+        c.width = 800;
+        c.height = 500;
+        ctx.fillStyle = "green";
+        ctx.fillRect(0, 0, c.width, c.height);
+    
+        ctx.fillStyle = "red";
+        ctx.fillRect(c.width-167, c.height-4, 167, 4);
+    }
+    
+    function flu() {
+        c.width = 800;
+        c.height = 500;
+        ctx.fillStyle = "green";
+        ctx.fillRect(0, 0, c.width, c.height);
+    
+        ctx.fillStyle = "red";
+        ctx.fillRect(c.width-15, c.height-4, 15, 4);
     }
 </script>
 </body>
