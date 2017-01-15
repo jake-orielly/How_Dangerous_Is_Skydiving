@@ -41,7 +41,7 @@ Your browser does not support the HTML5 canvas tag.
             <button type="button" class = "button" onclick=flu()> <div class='buttonText'>Killed By Flu or Pneumonia</div></button>
         </td>
         <td>
-            <button type="button" class = "button" onclick=flu()> <div class='buttonText'>Killed By A Shark</div></button>
+            <button type="button" class = "button" onclick=shark()> <div class='buttonText'>Killed By A Shark</div></button>
         </td>
     </tr>
 </table>
@@ -62,7 +62,7 @@ Your browser does not support the HTML5 canvas tag.
         ctx.fillRect(0, 0, c.width, c.height);
     
         ctx.fillStyle = "red";
-        ctx.fillRect(c.width-2, c.height-2, 2, 2);
+        ctx.fillRect(c.width-4, c.height-4, 2, 2);
     }
     
     function lottery() {
@@ -78,7 +78,7 @@ Your browser does not support the HTML5 canvas tag.
         }
         
         ctx.fillStyle = "red";
-        ctx.fillRect(c.width-1, c.height-1, 1, 1);
+        ctx.fillRect(c.width-2, c.height-2, 1, 1);
     }
     
     function lightning() {
@@ -89,7 +89,7 @@ Your browser does not support the HTML5 canvas tag.
         ctx.fillRect(0, 0, c.width, c.height);
         
         ctx.fillStyle = "red";
-        ctx.fillRect(c.width-2, c.height-2, 2, 2);
+        ctx.fillRect(c.width-4, c.height-4, 2, 2);
     }
     
     function heartDisease() {
@@ -110,6 +110,21 @@ Your browser does not support the HTML5 canvas tag.
     
         ctx.fillStyle = "red";
         ctx.fillRect(c.width-15, c.height-4, 15, 4);
+    }
+    
+    function shark() {
+        c.width = 1000;
+        c.height = 15000;
+        ctx.fillStyle = "green";
+        ctx.fillRect(0, 0, c.width, c.height);
+        
+        ctx.fillStyle = "black";
+        for (var i = 1; i < c.height/100; i++) {
+            ctx.fillRect(0,i*100,c.width,1);
+        }
+        
+        ctx.fillStyle = "red";
+        ctx.fillRect(c.width-4, c.height-4, 2, 2);
     }
 </script>
 </body>
