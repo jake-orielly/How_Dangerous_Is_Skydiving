@@ -99,8 +99,7 @@ Your browser does not support the HTML5 canvas tag.
         ctx.fillRect(0, 0, c.width, c.height);
     
         ctx.fillStyle = "red";
-        ctx.fillRect(c.width-8, c.height-21, 8, 1); //668 total
-        ctx.fillRect(c.width-33, c.height-20, 33, 20);
+        ctx.fillRect((c.width/4)*3, 0, (c.width/4)*3, c.height); //1/4
     }
     
     function flu() {
