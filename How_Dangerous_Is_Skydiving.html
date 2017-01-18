@@ -56,7 +56,9 @@ Your browser does not support the HTML5 canvas tag.
         <td>
             <button type="button" class = "button" onclick=oneHundred()> <div class='buttonText'>Live to One Hundred</div></button>
         </td>
-
+        <td>
+            <button type="button" class = "button" onclick=onePercent()> <div class='buttonText'>One Percent</div></button>
+        </td>
     </tr>
 </table>
     
@@ -169,6 +171,16 @@ Your browser does not support the HTML5 canvas tag.
     
         ctx.fillStyle = "red";
         ctx.fillRect(c.width-8, c.height-10, 8, 10);
+    }
+    
+    function onePercent() {
+        c.width = 800;
+        c.height = 500;
+        ctx.fillStyle = "green";
+        ctx.fillRect(0, 0, c.width, c.height);
+    
+        ctx.fillStyle = "red";
+        ctx.fillRect(c.width-25, c.height-16, 25, 16);
     }
 </script>
 </body>
