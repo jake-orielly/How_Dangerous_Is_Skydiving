@@ -44,6 +44,14 @@ Your browser does not support the HTML5 canvas tag.
             <button type="button" class = "button" onclick=shark()> <div class='buttonText'>Killed By A Shark</div></button>
         </td>
     </tr>
+    <tr>
+        <td>
+            <button type="button" class = "button" onclick=injury()> <div class='buttonText'>Die Of Injury</div></button>
+        </td>
+        <td>
+            <button type="button" class = "button" onclick=murder()> <div class='buttonText'>Killed in Car Crash</div></button>
+        </td>
+    </tr>
 </table>
     
 <script>
@@ -125,6 +133,26 @@ Your browser does not support the HTML5 canvas tag.
         
         ctx.fillStyle = "red";
         ctx.fillRect(c.width-4, c.height-4, 2, 2);
+    }
+    
+    function injury() {
+        c.width = 800;
+        c.height = 500;
+        ctx.fillStyle = "green";
+        ctx.fillRect(0, 0, c.width, c.height);
+    
+        ctx.fillStyle = "red";
+        ctx.fillRect(c.width-10, c.height-25, 10, 25);
+    }
+    
+    function murder() {
+        c.width = 800;
+        c.height = 500;
+        ctx.fillStyle = "green";
+        ctx.fillRect(0, 0, c.width, c.height);
+    
+        ctx.fillStyle = "red";
+        ctx.fillRect(c.width-8, c.height-5, 8, 5);
     }
 </script>
 </body>
