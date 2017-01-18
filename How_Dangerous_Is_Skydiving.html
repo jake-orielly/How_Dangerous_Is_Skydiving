@@ -52,6 +52,12 @@ Your browser does not support the HTML5 canvas tag.
             <button type="button" class = "button" onclick=murder()> <div class='buttonText'>Killed in Car Crash</div></button>
         </td>
     </tr>
+    <tr>
+        <td>
+            <button type="button" class = "button" onclick=oneHundred()> <div class='buttonText'>Live to One Hundred</div></button>
+        </td>
+
+    </tr>
 </table>
     
 <script>
@@ -153,6 +159,16 @@ Your browser does not support the HTML5 canvas tag.
     
         ctx.fillStyle = "red";
         ctx.fillRect(c.width-8, c.height-5, 8, 5);
+    }
+    
+    function oneHundred() {
+        c.width = 800;
+        c.height = 500;
+        ctx.fillStyle = "green";
+        ctx.fillRect(0, 0, c.width, c.height);
+    
+        ctx.fillStyle = "red";
+        ctx.fillRect(c.width-8, c.height-10, 8, 10);
     }
 </script>
 </body>
