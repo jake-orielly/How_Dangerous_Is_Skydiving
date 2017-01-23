@@ -60,6 +60,11 @@ Your browser does not support the HTML5 canvas tag.
             <button type="button" class = "button" onclick=onePercent()> <div class='buttonText'>One Percent</div></button>
         </td>
     </tr>
+    <tr>
+        <td>
+            <button type="button" class = "button" onclick=manyBabies()> <div class='buttonText'>1 Pregnancy Many Babies</div></button>
+        </td>
+    </tr>
 </table>
     
 <script>
@@ -182,6 +187,17 @@ Your browser does not support the HTML5 canvas tag.
         ctx.fillStyle = "red";
         ctx.fillRect(c.width-25, c.height-16, 25, 16);
     }
+    
+    function manyBabies() {
+        c.width = 800;
+        c.height = 500;
+        ctx.fillStyle = "green";
+        ctx.fillRect(0, 0, c.width, c.height);
+    
+        ctx.fillStyle = "red";
+        ctx.fillRect(c.width-60, c.height-100, 60, 100);
+    }
+    
 </script>
 </body>
 </html>
